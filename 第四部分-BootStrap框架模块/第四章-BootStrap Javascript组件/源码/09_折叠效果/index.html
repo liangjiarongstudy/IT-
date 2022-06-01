@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <a href="#collapseExample" class="btn btn-primary" data-toggle="collapse">查看</a>
+        <button class="btn btn-default" data-toggle="collapse" data-target="#collapseExample">按钮</button>
+        <div class="collapse" id="collapseExample">
+            <div class="well">这是一个内容模块</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a href="#oneCollapse" data-toggle="collapse" data-parent="#accordion">
+                            水果
+                        </a>
+                    </h4>
+                </div>
+                <div id="oneCollapse" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        苹果 香蕉 火龙果
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a href="#towCollapse" data-toggle="collapse" data-parent="#accordion">
+                            蔬菜
+                        </a>
+                    </h4>
+                </div>
+                <div id="towCollapse" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        大白菜 油麦菜 金针菇
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a href="#threeCollapse" data-toggle="collapse" data-parent="#accordion">
+                            粮油
+                        </a>
+                    </h4>
+                </div>
+                <div id="threeCollapse" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        小米 大豆油 大米
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#accordion').on('hidden.bs.collapse', function () {
+            console.log("隐藏");
+        })
+    </script>
+
+</body>
+
+</html>

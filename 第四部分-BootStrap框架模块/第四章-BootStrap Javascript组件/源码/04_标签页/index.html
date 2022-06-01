@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#home">首页</a></li>
+            <li><a data-toggle="tab" href="#news">新闻</a></li>
+            <li><a data-toggle="tab" href="#yule">娱乐</a></li>
+            <li><a data-toggle="tab" href="#sprots">体育</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="home">首页内容</div>
+            <div class="tab-pane" id="news">新闻内容</div>
+            <div class="tab-pane" id="yule">娱乐内容</div>
+            <div class="tab-pane" id="sprots">体育内容</div>
+        </div>
+    </div>
+
+    <script>
+
+        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+            console.log(e.target); // newly activated tab
+            console.log(e.relatedTarget); // previous active tab
+        })
+
+    </script>
+
+</body>
+
+</html>

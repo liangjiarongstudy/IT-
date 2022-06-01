@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">打开对话框</button>
+
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">对话框</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>介绍对话框</p>
+                        <p>介绍对话框</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button class="btn btn-default">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModalsm">打开对话框</button>
+
+        <div class="modal fade" id="myModalsm">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">对话框</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>介绍对话框</p>
+                        <p>介绍对话框</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button class="btn btn-default">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <button id="open" class="btn btn-default">打开</button>
+        <button id="close" class="btn btn-default">关闭</button>
+        <button id="toggle" class="btn btn-default">打开或者关闭</button>
+    </div>
+
+    <script>
+        $("#open").click(function () {
+            $("#myModalsm").modal('show')
+        })
+
+        $("#close").click(function () {
+            $("#myModalsm").modal('hide')
+        })
+
+        $("#toggle").click(function () {
+            $("#myModalsm").modal('toggle')
+        })
+
+        // 监听模态框关闭之后触发事件
+        $('#myModalsm').on('hidden.bs.modal', function (e) {
+            console.log("关闭对话框");
+        })
+
+        // 监听模态框打开之后触发的事件
+        $('#myModalsm').on('shown.bs.modal', function (e) {
+            console.log("打开对话框");
+        })
+
+    </script>
+
+</body>
+
+</html>

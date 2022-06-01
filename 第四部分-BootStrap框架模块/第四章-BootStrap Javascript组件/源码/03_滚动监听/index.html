@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <style>
+        body {
+            position: relative;
+        }
+
+        ul.nav-pills {
+            position: fixed;
+            margin-top: 20px;
+        }
+
+        .content div {
+            height: 600px;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll">
+    <!-- 锚点的知识点 -->
+    <div class="container">
+        <div class="row">
+            <!-- 承载导航 -->
+            <div class="col-md-3" id="myScrollspy">
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item active"><a class="nav-link" href="#home">首页</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#news">新闻</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sport">体育</a></li>
+                </ul>
+            </div>
+            <!-- 承载内容 -->
+            <div class="col-md-9 content">
+                <div class="bg-success" id="home">
+                    <h3>首页内容</h3>
+                    <p>这是一个首页</p>
+                </div>
+                <div class="bg-info" id="news">
+                    <h3>新闻内容</h3>
+                    <p>这是一个新闻</p>
+                </div>
+                <div class="bg-danger" id="sport">
+                    <h3>体育内容</h3>
+                    <p>这是一个体育</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#myScrollspy').on('activate.bs.scrollspy', function () {
+            // to do something
+            console.log("滚动监听");
+        })
+    </script>
+
+</body>
+
+</html>

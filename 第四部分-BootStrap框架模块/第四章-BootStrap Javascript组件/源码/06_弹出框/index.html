@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <style>
+        .container {
+            margin-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <button class="btn btn-success" data-toggle="popover" title="提示框" data-content="提示框内容">
+            弹出框
+        </button>
+    </div>
+
+    <div class="container">
+        <button class="btn btn-success" data-placement="top" data-toggle="popover" title="上" data-content="上提示框内容">
+            弹出框
+        </button>
+        <button class="btn btn-success" data-placement="bottom" data-toggle="popover" title="下" data-content="下提示框内容">
+            弹出框
+        </button>
+        <button class="btn btn-success" data-placement="left" data-toggle="popover" title="左" data-content="左提示框内容">
+            弹出框
+        </button>
+        <button class="btn btn-success" data-placement="right" data-toggle="popover" title="右" data-content="又提示框内容">
+            弹出框
+        </button>
+    </div>
+
+    <div class="container">
+        <button class="btn btn-success" data-trigger="focus" data-placement="top" data-toggle="popover" title="失去焦点"
+            data-content="又提示框内容">
+            失去焦点消失的弹出框
+        </button>
+    </div>
+
+    <div class="container">
+        <button id="myPopover" class="btn btn-success" data-placement="right" data-toggle="popover" title="右" data-content="又提示框内容">
+            弹出框
+        </button>
+    </div>
+
+    <script>
+        $(function () {
+            $('[data-toggle="popover"]').popover()
+        })
+
+        $('#myPopover').on('hidden.bs.popover', function () {
+            console.log("消失了");
+        })
+
+        $('#myPopover').on('shown.bs.popover', function () {
+            console.log("显示了");
+        })
+    </script>
+
+</body>
+
+</html>
