@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul class="topnav">
+        <li>Item 1</li>
+        <li>
+            <ul>
+                <li>child item 1</li>
+                <li>child item 2</li>
+                <li>child item 3</li>
+            </ul>
+        </li>
+        <li>Item 3</li>
+    </ul>
+
+    <script>
+        // //  1. 给所有ul标签下的li标签添加一个边框（直接子元素）
+        // var topnav = document.getElementsByClassName("topnav")[0];
+        // // 读取到topnav下面所有的子元素
+        // var children = topnav.childNodes;
+        // for(var i = 0;i<children.length;i++){
+        //     if(children[i].nodeName !== "#text"){
+        //         children[i].style.border = "3px solid green"
+        //     }
+        // }
+
+        // 2. 给所有ul标签下的li标签添加一个边框（后代元素）
+        var topnav = document.getElementsByClassName("topnav")[0];
+        var children = topnav.getElementsByTagName("li");
+        for(var i = 0;i<children.length;i++){
+            children[i].style.border = "3px solid green"
+        }
+
+    </script>
+    
+</body>
+</html>

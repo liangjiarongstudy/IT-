@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <ul class="topnav">
+        <li>item 1</li>
+        <li>
+            <ul>
+                <li>child item 1</li>
+                <li>child item 2</li>
+                <li>child item 3</li>
+            </ul>
+        </li>
+        <li>item 3</li>
+    </ul>
+
+    <script>
+        //1.直接子元素
+        // var topnav = document.getElementsByClassName('topnav')[0];
+        // //读取到ul下所有的子元素
+        // var childern = topnav.childNodes;
+        // for (var i = 0; i < childern.length; i++) {
+        //     if (childern[i].nodeName !== '#text') {
+        //         childern[i].style.border = '3px solid green';
+        //     }
+        // }
+
+        //2.后代子元素
+        var topnav = document.getElementsByClassName('topnav')[0];
+        var childern = topnav.getElementsByTagName('li');
+        for (var i = 0; i < childern.length; i++) {
+            childern[i].style.border = '3px solid yellow';
+        }
+    </script>
+</body>
+
+</html>

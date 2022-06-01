@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 600px;
+    margin: 100px auto;
+}
+
+.container ul {
+    list-style: none;
+}
+
+.container ul li h3 {
+    background-color: skyblue;
+    border-bottom: 1px solid #000;
+    position: relative;
+}
+
+.container ul li h3 span {
+    position: absolute;
+    right: 5px;
+}
+
+.contant {
+    display: none;
+}

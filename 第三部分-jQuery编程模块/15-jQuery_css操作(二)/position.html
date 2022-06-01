@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./JS/jquery-3.6.0.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #000;
+            margin-left: 100px;
+            position: relative;
+        }
+        
+        .box {
+            width: 100px;
+            height: 100px;
+            padding: 15px;
+            background-color: red;
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+    <script>
+        //1.利用offset获取当前元素距离左边的值
+        var offset = $(".box").offset();
+        console.log(offset);
+
+        //2.利用position获取当前元素距离左边的值
+        var position = $(".box").position();
+        console.log(position);
+    </script>
+</body>
+
+</html>

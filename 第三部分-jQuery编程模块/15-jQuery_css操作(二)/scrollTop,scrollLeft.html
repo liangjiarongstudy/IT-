@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./JS/jquery-3.6.0.min.js"></script>
+    <style>
+        .container {
+            background: #ccc;
+            border: 3px solid #666;
+            margin: 5px;
+            padding: 5px;
+            width: 200px;
+            height: 200px;
+            overflow: auto;
+        }
+        
+        p {
+            margin: 10px;
+            padding: 5px;
+            border: 2px solid #666;
+            width: 1000px;
+            height: 1000px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>itbaizhan</h1>
+        <p>sxt</p>
+    </div>
+    <span class="text"></span>
+    <script>
+        //设置父级容器左右和上下滚动
+        $(".container").scrollTop(200);
+        $(".container").scrollLeft(200);
+        console.log($(".container").scrollLeft());
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./swiper-bundle.min.css">
+    <style>
+        .swiper {
+            width: 600px;
+            height: 300px;
+        }
+        img{
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="./images/0.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/1.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/2.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/3.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="./images/4.jpg" alt="">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <script src="./swiper-bundle.min.js"></script>
+    <script>
+        var mySwiper = new Swiper(".swiper", {
+            loop: true, // 循环模式选项
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            // 如果需要前进后退按钮
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <style>
+
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            padding: 20px;
+            border: 10px solid green;
+            margin: 30px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+
+    <script>
+        // 获取一个div的宽度高度+padding+border
+        var height1 = $(".box").outerHeight();
+        var width1 = $(".box").outerWidth();
+        console.log(height1,width1); // 260 260
+
+        //  获取一个div的宽度高度+padding+border+margin
+        var height2 = $(".box").outerHeight(true);
+        var width2 = $(".box").outerWidth(true);
+        console.log(height2,width2); // 320 320
+
+
+    </script>
+</body>
+</html>

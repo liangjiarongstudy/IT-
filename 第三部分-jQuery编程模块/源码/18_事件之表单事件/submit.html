@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <form>
+        <input type="text">
+        <input type="submit">
+    </form>
+    
+    <script>
+        // submit表单提交事件：只能绑定在form表单上
+        $("form").submit(function(){
+            alert("提交触发了")
+            // 将表单的数据提交给服务器
+        })
+
+    </script>
+
+</body>
+</html>

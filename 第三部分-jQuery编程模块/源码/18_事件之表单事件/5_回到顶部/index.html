@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <style>
+
+        div{
+            height: 500px;
+        }
+
+        #btn{
+            width: 35px;
+            height: 45px;
+            position: fixed;
+            right: 50px;
+            bottom: 50px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div>内容1</div>
+    <div>内容2</div>
+    <div>内容3</div>
+    <div>内容4</div>
+    <div>内容5</div>
+    <div>内容6</div>
+
+    <!-- 让a标签失去跳转功能 -->
+    <a href="javaScript:void(0)" id="btn">回到顶部</a>
+    
+    <script>
+        // 自执行函数：在js中，作用域是函数级的
+        $(function(){
+
+            // 什么时候显示回到顶部按钮
+            $(window).scroll(function(){
+                // 获得滚动距离，当滚动距离超过500px的时候，在让回到顶部显示
+                if($(window).scrollTop() >= 500){
+                    $("#btn").fadeIn(300);
+                }else{
+                    $("#btn").fadeOut(300);
+                }
+            })
+
+            $("#btn").click(function(){
+                $("html").animate({
+                    scrollTop:0
+                },500)
+            })
+        })
+
+    </script>
+
+</body>
+</html>

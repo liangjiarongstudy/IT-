@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+    </ul>
+
+    <script>
+        // 通过get获取列表中的其中一个元素
+        // 下标从0开始
+
+        $("li").get(1).innerHTML = "我是一个全新的item"
+
+        /*
+            为什么要有js和jQuery对象的相互转换
+                解：因为他们的方法和属性是不能互相调用的  
+        
+            1. js对象转换成jquery对象：$(lis)
+            2. jquery对象转换成js对象
+                1. 获取一个元素：get();
+                2. 获取每一个元素:each  map
+        */
+
+        console.log($("li").get(1));
+
+    </script>
+    
+</body>
+</html>

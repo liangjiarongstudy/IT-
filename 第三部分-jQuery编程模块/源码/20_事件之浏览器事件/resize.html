@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <style>
+
+        div{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div></div>
+
+    <script>
+
+        // 浏览器事件：resize：当浏览器的可视窗口发生变化时触发
+        $(window).resize(function(){
+            console.log("浏览器窗口大小发生变化");
+            // 窗口发生变化要隐藏一些元素
+            // 当浏览器的可视窗口小于800的时候，隐藏div
+            if($(window).width() <= 800){
+                $("div").css("display","none");
+            }
+        })
+
+
+    </script>
+    
+</body>
+</html>

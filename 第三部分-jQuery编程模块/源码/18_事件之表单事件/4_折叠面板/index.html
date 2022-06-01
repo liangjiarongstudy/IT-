@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            width: 600px;
+            margin: 100px auto;
+        }
+
+        .container ul{
+            list-style: none;
+        }
+
+        .container ul li h3{
+            background-color: skyblue;
+            border-bottom: 1px solid #000;
+            position: relative;
+        }
+
+        .container ul li h3 span{
+            position: absolute;
+            right: 5px;
+        }
+
+        .content{
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <ul>
+            <li>
+                <h3>您好同学,欢迎您的咨询 <span>&gt;</span></h3>
+                <div class="content">
+                    您好同学,欢迎您的咨询!百战程序员始终以实战化教学为理念，
+                    以能真实胜任企业开发需求为教学标准，秉承着让人人享有品质教育的美好愿景，
+                    专注于互联网在线教育。目前java，python，web前端，人工智能，大数据，
+                    架构，测试，微服务架构等全系列就业班火热报名中，惊喜多多！
+                </div>
+            </li>
+            <li>
+                <h3>您好同学,欢迎您的咨询 <span>&gt;</span></h3>
+                <div class="content">
+                    您好同学,欢迎您的咨询!百战程序员始终以实战化教学为理念，
+                    以能真实胜任企业开发需求为教学标准，秉承着让人人享有品质教育的美好愿景，
+                    专注于互联网在线教育。目前java，python，web前端，人工智能，大数据，
+                    架构，测试，微服务架构等全系列就业班火热报名中，惊喜多多！
+                </div>
+            </li>
+            <li>
+                <h3>您好同学,欢迎您的咨询 <span>&gt;</span></h3>
+                <div class="content">
+                    您好同学,欢迎您的咨询!百战程序员始终以实战化教学为理念，
+                    以能真实胜任企业开发需求为教学标准，秉承着让人人享有品质教育的美好愿景，
+                    专注于互联网在线教育。目前java，python，web前端，人工智能，大数据，
+                    架构，测试，微服务架构等全系列就业班火热报名中，惊喜多多！
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+
+        $("h3").click(function(){
+            // is()：判断当前元素是否显示(:visible)，显示返回true，否则返回false
+            if($(this).siblings().is(":visible")){
+                // 隐藏
+                $(this).siblings().slideUp();
+                // 修改符号向右
+                $(this).find("span").html(">")
+            }else{
+                // 显示
+                $(this).siblings().slideDown();
+                // 隐藏其他元素 
+                $(this).parent().siblings().find(".content").slideUp();
+                // 修改符号向下
+                $(this).find("span").html("v")
+                $(this).parent().siblings().find("span").html(">");
+            }
+           
+        })
+
+    </script>
+    
+</body>
+</html>
+

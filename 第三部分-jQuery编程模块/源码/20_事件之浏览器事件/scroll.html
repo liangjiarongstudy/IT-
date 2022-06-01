@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <style>
+
+        p{
+            height: 500px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <p>内容1</p>
+    <p>内容2</p>
+    <p>内容3</p>
+    <p>内容4</p>
+
+    <script>
+        // 浏览器事件：滚动事件 scroll
+
+        $(window).scroll(function(){
+            // 获得滚动高度的方法
+            if($(window).scrollTop() >= $(window).height() - 50){
+                console.log("浏览器滚动到了最底下，被你看光了");
+            }
+        })
+        
+
+    </script>
+    
+</body>
+</html>

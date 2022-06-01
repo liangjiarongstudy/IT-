@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <script>
+        //两个参数：index、element
+        //index：每个元素下标
+        //element：每个元素
+        $("li").each(function(index, element) {
+            console.log(index, element);
+            element.innerHTML = 'item' + index + 'new';
+            if (index == 2) {
+                element.style.color = 'red';
+            }
+        })
+    </script>
+</body>
+
+</html>

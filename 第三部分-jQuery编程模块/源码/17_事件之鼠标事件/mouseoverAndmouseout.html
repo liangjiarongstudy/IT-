@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <style>
+
+        .root{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+        }
+
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="root">
+        <div class="box"></div>
+    </div>
+
+    <script>
+
+        // mouseover  mouseout
+        // $(".root").mouseover(function(){
+        //     console.log("鼠标进入元素");
+        // })
+
+        // $(".root").mouseout(function(){
+        //     console.log("鼠标离开元素");
+        // })
+
+        
+        $(".root").mouseenter(function(){
+            console.log("鼠标进入元素");
+        })
+
+        $(".root").mouseleave(function(){
+            console.log("鼠标离开元素");
+        })
+
+
+    </script>
+    
+</body>
+</html>

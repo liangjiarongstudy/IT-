@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <table border="1">
+        <tr>
+            <td>TD #0</td>
+            <td>TD #1</td>
+            <td>TD #2</td>
+        </tr>
+        <tr>
+            <td>TD #3</td>
+            <td>TD #4</td>
+            <td>TD #5</td>
+        </tr>
+        <tr>
+            <td>TD #6</td>
+            <td>TD #7</td>
+            <td>TD #8</td>
+        </tr>
+    </table>
+
+    <script>
+
+        // jQuery扩展选择器，lt(index) 小于index的值
+
+        $("td:lt(5)").css("background-color","red")
+
+
+    </script>
+    
+</body>
+</html>

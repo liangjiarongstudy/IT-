@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <button id="btn">按钮</button>
+
+    <script>
+
+        $("#btn").on("click",function(e){
+            // e.target:js对象
+            console.log(e.target); // button
+            // js中
+            console.log(e.target.innerHTML);
+            // jQuery中
+            // jquery对象才能调用jquery方法，js对象能调用js的方法，不能混淆
+            // 把一个js对象变成一个jquery对象 $(js对象)
+            console.log($(e.target).html());
+        })
+
+    </script>
+    
+</body>
+</html>

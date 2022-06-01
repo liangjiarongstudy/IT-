@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <img class="img1" src="./1.jpg" alt="小姐姐">
+    <img class="img2" src="" alt="">
+
+    <script>
+
+        var content = $(".img1").attr("alt");
+
+        $(".img2").attr("src","./1.jpg")
+
+        // 同时设置多个属性
+        $(".img2").attr({
+            src:"./1.jpg",
+            alt:"美女",
+            title:"小姐姐"
+        })
+
+    </script>
+    
+</body>
+</html>

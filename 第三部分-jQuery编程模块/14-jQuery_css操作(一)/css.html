@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./JS/jquery-3.6.0.min.js"></script>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="container"></div>
+    <script>
+        //通过.css获取当前元素样式
+        var color = $(".box").css("background");
+        // $(".container").css('height', '200px')
+        $(".container").css({
+            width: '200px',
+            height: '200px',
+            background: 'green'
+        })
+    </script>
+</body>
+
+</html>

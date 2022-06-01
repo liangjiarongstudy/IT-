@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="box">hello</div>
+    <script>
+        //1.设置一个元素内容和获取一个元素内容
+        // $(".box").html(); //获取内容
+        // $(".box").html("123");  //设置内容
+        //在JS中 innerHTML innerText  在jQuery中  html()  text(),html()自动识别标签
+        $(".box").text("<a href='#'>itbaizhan</a>");
+        $(".box").html("<a href='#'>itbaizhan</a>");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <button class="btn btn-success" id="myBtn">按钮</button>
+    </div>
+
+
+    <div class="container">
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-success active">
+                <input type="checkbox">选项1
+            </label>
+            <label class="btn btn-success">
+                <input type="checkbox">选项2
+            </label>
+            <label class="btn btn-success">
+                <input type="checkbox">选项3
+            </label>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-info">
+                <input type="radio" name="group">1
+            </label>
+            <label class="btn btn-info">
+                <input type="radio" name="group">2
+            </label>
+            <label class="btn btn-info">
+                <input type="radio" name="group">3
+            </label>
+        </div>
+    </div>
+
+
+
+    <script>
+        $("#myBtn").click(function(e) {
+            var btn = $(this).button('loading');
+            setTimeout(function() {
+                btn.button('reset');
+            }, 2000)
+        })
+    </script>
+</body>
+
+</html>

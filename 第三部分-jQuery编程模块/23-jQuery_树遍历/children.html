@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./JS/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <ul class="top">
+        <li>1</li>
+        <li>
+            <ul class="under">
+                <li>21</li>
+                <li>22</li>
+            </ul>
+        </li>
+        <li>3</li>
+    </ul>
+    <script>
+        $(".top").children('li').css('border', '2px solid red');
+    </script>
+</body>
+
+</html>

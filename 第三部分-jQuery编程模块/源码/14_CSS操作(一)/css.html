@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="box"></div>
+    <div class="container"></div>
+
+    <script>
+        // 通过.css获取当前元素的样式
+        var color = $(".box").css("background-color");
+
+        $(".container").css("height","200px")
+
+        $(".container").css({
+            width:"200px",
+            height:"200px",
+            // 如果涉及到-的形式，写成驼峰命名法：font-size -> fontSize
+            backgroundColor:"green"
+        })
+
+    </script>
+    
+</body>
+</html>

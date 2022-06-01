@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.6.0.js"></script>
+</head>
+<body>
+
+    <input type="text" id="username">
+
+    <script>
+        // 表单事件：失去焦点事件blur
+        $("#username").blur(function(){
+            console.log("失去焦点");
+            $("#username").val(""); // 清空输入框中的内容
+        })
+
+    </script>
+    
+</body>
+</html>

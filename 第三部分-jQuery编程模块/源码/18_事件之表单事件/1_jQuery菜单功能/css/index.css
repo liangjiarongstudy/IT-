@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.menu{
+    list-style: none;
+    width: 500px;
+    height: 50px;
+    background: skyblue;
+    margin: 100px auto;
+}
+
+/* 直接子元素 */
+.menu>li{
+    float: left;
+    width: 99px;
+    height: 50px;
+    border-right: 1px solid white;
+    line-height: 50px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.dropdown{
+    list-style: none;
+    background: wheat;
+    display: none;
+}
+
+.dropdown li:hover{
+    color: red;
+}

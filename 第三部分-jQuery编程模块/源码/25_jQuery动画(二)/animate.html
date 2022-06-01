@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <style>
+
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div></div>
+
+    <button id="btn">执行动画</button>
+    <button id="btn2">执行动画</button>
+
+    <script>
+        // 自定义动画:animate({  }) 宽度和透明度一起执行动画
+        $("#btn").click(function(){
+            $("div").animate({
+                width:"400px",
+                opacity:0.5
+            },2000)   // 第二个参数是动画执行的时常
+        })
+
+
+        $("#btn2").click(function(){
+            $("div").animate({
+                width:"200px",
+                opacity:1
+            },2000)   // 第二个参数是动画执行的时常
+        })
+
+    </script>
+    
+</body>
+</html>

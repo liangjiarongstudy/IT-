@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div></div>
+
+    <button id="show">显示</button>
+    <button id="hide">隐藏</button>
+
+    <script>
+        // jquery动画：hide(time)  time:动画执行的时常 单位是毫秒
+        
+        $("#show").click(function(){
+            $("div").show(1000)
+        })
+
+        $("#hide").click(function(){
+            $("div").hide(1000)
+        })
+
+    </script>
+    
+</body>
+</html>

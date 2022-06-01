@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./JS/jquery-3.6.0.min.js"></script>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        
+        #container {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            position: absolute;
+            left: 108px;
+            top: 8px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+    <div id="container"></div>
+    <script>
+        //hover：鼠标移入和移除
+        $("#box").hover(function() {
+                $("#container").css('display', 'block');
+            },
+            function() {
+                $("#container").css('display', 'none');
+            })
+    </script>
+</body>
+
+</html>

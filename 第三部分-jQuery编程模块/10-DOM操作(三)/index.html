@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="text">hello</p>
+    <script>
+        //闯创建一个div容器，包裹p标签
+        //1.创建div元素
+        var root = document.createElement('div');
+        //2.找到p标签
+        var text = document.getElementById('text');
+        //3.将p标签放入到div中
+        root.appendChild(text);
+        //4.将div放入到body中显示
+        document.getElementsByTagName('body')[0].appendChild(root);
+    </script>
+</body>
+
+</html>

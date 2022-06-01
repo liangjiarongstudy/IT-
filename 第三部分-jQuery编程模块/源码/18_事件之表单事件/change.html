@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <input type="text" id="username">
+
+    <script>
+        // 表单事件：内容发生改变，失去焦点，或者回车都会触发
+        $("#username").change(function(e){
+            console.log(e.target.value); // js的方法，如果想用jq：val
+            console.log($(e.target).val()); // $() // 1. 选择器 2. 转换成一个jQuery对象
+            console.log($(this).val()); // this代表当前元素，也就是input输入框
+        })
+
+    </script>
+    
+</body>
+</html>

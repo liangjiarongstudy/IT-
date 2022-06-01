@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./JS/jquery-3.6.0.min.js"></script>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <button id="1">显示</button>
+    <button id="2">隐藏</button>
+    <script>
+        $("#1").click(function() {
+            $("div").slideDown(2000);
+        })
+
+        $("#2").click(function() {
+            $("div").slideUp(2000);
+        })
+    </script>
+</body>
+
+</html>

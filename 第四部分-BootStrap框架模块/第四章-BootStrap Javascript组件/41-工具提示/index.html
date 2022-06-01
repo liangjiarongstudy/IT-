@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <p>"百战程序员"是高端在线教育品牌，提供系统化优质课程及专业教学服务， 其中包括Java、Python、<a href="#" data-toggle="tooltip" data-placement="bottom" title="专为学习前端而打造">Web前端</a> 、大数据、人工智能、区块7u软实力、 毕设项目等，强大的师资教研团队，为你打造量身定制的精品在线课程， 让学习更简单、更高效.
+        </p>
+        <button id="myTooltip" data-toggle="tooltip" data-placement="bottom" title="专为学习前端而打造">Web前端</button>
+    </div>
+
+
+    <div class="container">
+        <button class="btn btn-success" data-toggle="tooltip" data-placement="bottom" title="专为学习前端而打造"></button>
+        <button class="btn btn-success" data-toggle="tooltip" data-placement="left" title="专为学习前端而打造"></button>
+        <button class="btn btn-success" data-toggle="tooltip" data-placement="right" title="专为学习前端而打造"></button>
+        <button class="btn btn-success" data-toggle="tooltip" data-placement="top" title="专为学习前端而打造"></button>
+
+    </div>
+
+
+    <script>
+        $(function() {
+            $("[data-toggle='tooltip']").tooltip();
+        })
+
+        $("#myTooltip").on('show.bs.tooltip', function(e) {
+            console.log('fdsf');
+        })
+    </script>
+
+</body>
+
+</html>

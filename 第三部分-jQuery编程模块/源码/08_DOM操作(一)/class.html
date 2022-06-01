@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <div class="error">Hello</div>
+
+    <span class="txt">Hello</span>
+
+    <a href="#" class="active">itbaizhan</a>
+
+    <img src="" alt="" class="img">
+
+    <script>
+
+        /**
+         * 1. addClass() :添加class，不会覆盖原有的class  可以添加多个class，用个空格隔开
+         * 2. removeClass() :移除class，可以移除一个或者多个，也可以全部移除
+         * 3. toggleClass() :开关，如果存在则删除，如果不存在则添加
+         * 4. hasClass() :判断一个元素是否存在某个class，存在返回true，不存在返回false
+         * 
+         * 补充知识点：在jQuery中，有个链式调用
+         * */
+
+        // $("div").addClass("txt success");
+        // $("div").removeClass("txt error");
+        // $("div").removeClass(); // 全部移除
+        // $("span").toggleClass("txt")
+
+        // var flag = $("a").hasClass("active");
+        // console.log(flag);
+        // if(flag){
+        //     console.log("a标签存在active");
+        // }else{
+        //     console.log("a标签不存在active");
+        // }
+
+        // 给某个元素添加一个class然后在移除一个class
+        // 把img的class="img"移除掉，在添加个class="image"
+        // $("img").addClass("image");
+        // $("img").removeClass("img")
+
+        $("img").removeClass("img").addClass("image") // 链式调用
+
+
+
+
+    </script>
+    
+</body>
+</html>

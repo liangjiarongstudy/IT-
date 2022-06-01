@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <a href="#contentId" class="btn btn-success" data-toggle="collapse">查看</a>
+        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#contentId">点击</button>
+        <div class="collapse" id="contentId">
+            <div class="well">fdsfdsafdsdadf</div>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <div class="panel-group" id="according">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a href="#one" data-toggle="collapse" data-parent="#according">
+                        水果
+                    </a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse in" id="one">
+                    <div class="panel-body">
+                        苹果,香蕉,橘子
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a href="#two" data-toggle="collapse" data-parent="#according">
+                        蔬菜
+                    </a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse" id="two">
+                    <div class="panel-body">
+                        白菜,芹菜,油麦菜
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a href="#three" data-toggle="collapse" data-parent="#according">
+                        肉类
+                    </a>
+                    </h4>
+                </div>
+                <div class="panel-collapse collapse" id="three">
+                    <div class="panel-body">
+                        猪肉,羊肉,牛肉
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <script>
+        $("#according").on('hide.bs.collapse', function() {
+            console.log('fdg');
+        })
+    </script>
+
+
+</body>
+
+</html>

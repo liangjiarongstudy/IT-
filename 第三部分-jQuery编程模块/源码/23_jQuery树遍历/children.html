@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <ul class="first">
+        <li>item 1</li>
+        <li>
+            <ul class="second">
+                <li>child item1</li>
+                <li>child item2</li>
+            </ul>
+        </li>
+        <li>item 3</li>
+        <span>Hello</span>
+    </ul>
+
+    <script>
+        // jquery元素关系  children：获取子元素
+        // $(".first").children().css("border","2px solid red")
+        $(".first").children("li").css("border","2px solid red")
+
+
+    </script>
+    
+</body>
+</html>

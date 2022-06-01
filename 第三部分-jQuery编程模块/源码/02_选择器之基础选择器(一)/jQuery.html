@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <div class="box">类选择器</div>
+    <div class="box">类选择器</div>
+    <span>元素选择器</span>
+    <a id="it" href="#">ID选择器</a>
+
+
+    <script>
+
+        // $就是jQuery的缩写，他就代表了jQuery
+
+        // 类选择器
+        $(".box").html("jQuery类选择器")
+
+        // 元素选择器
+        $("span").html("jQuery元素选择器")
+
+        // ID选择器
+        $("#it").html("jQuery ID选择器")
+
+    </script>
+    
+</body>
+</html>
